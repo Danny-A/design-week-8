@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0091e2ea-4797-4118-a2cc-6996d961214b/deploy-status)](https://app.netlify.com/sites/design-week-8/deploys)
+
 ### Installation
 
 ```
