@@ -5,7 +5,7 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "percy": "percy snapshot build/"
+    "test": "percy snapshot build/"
   },
   "license": "MIT",
   "devDependencies": {
