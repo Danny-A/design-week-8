@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
-    "test": "percy snapshot build/"
+    "percy": "percy snapshot build/",
+    "test": "npm-run-all build percy"
   },
   "license": "MIT",
   "devDependencies": {
@@ -23,6 +24,7 @@
     "html-webpack-plugin": "^4.0.0-beta.2",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
     "percy": "^0.7.2",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
