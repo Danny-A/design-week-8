@@ -1,3 +1,11 @@
 language: node_js
 node_js:
   - "10.14.1"
+jobs:
+include:
+  - stage: "Build"
+    script: "webpack --config webpack/webpack.config.prod.js  --colors"
+    name: "Building..."
+  - stage: "Test"
+    script: "percy snapshot build/"
+    name: "Visual Tests"
