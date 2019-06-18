@@ -6,7 +6,10 @@
     "build": "webpack --config webpack/webpack.config.prod.js  --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js",
     "percy": "percy snapshot build/",
-    "test": "npm-run-all build percy"
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "test": "npm-run-all snapshot",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "license": "MIT",
   "devDependencies": {
@@ -14,6 +17,8 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.4.5",
+    "@percy/storybook": "^3.0.2",
+    "@storybook/html": "^5.1.8",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.3",
