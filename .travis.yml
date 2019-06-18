@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - "10.14.1"
 jobs:
-include:
-  - stage: "Build"
-    script: npm run build
-    name: "Building..."
-  - stage: "Test"
-    script: npm run test
-    name: "Visual Tests"
+  include:
+    - stage: "Build"
+      script: npm run build
+      name: "Building..."
+    - stage: "Test"
+      script: npm run test
+      name: "Visual Tests"
