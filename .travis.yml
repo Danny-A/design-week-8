@@ -4,8 +4,8 @@ node_js:
 jobs:
 include:
   - stage: "Build"
-    script: "webpack --config webpack/webpack.config.prod.js  --colors"
+    script: npm run build
     name: "Building..."
   - stage: "Test"
-    script: "percy snapshot build/"
+    script: npm run test
     name: "Visual Tests"
