@@ -5,7 +5,7 @@ jobs:
   include:
     - stage: "Build"
       script: npm run build
-      name: "Building..."
+      name: "Building application"
     - stage: "Test"
       script: npm run test
       name: "Visual Tests"
